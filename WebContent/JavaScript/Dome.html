@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>叫爸爸</title>
+<style>
+.tip {
+	display: none;
+}
+</style>
+</head>
+<body>
+
+<!-- 	<input type="text" id="text" placeholder="输入手机号" />
+	<span id="tip" class="tip">11位手机号</span> -->
+	
+	<span id = "tip"> 你还可以输入30个文字 </span>
+	<textarea id = "text" cols = "40" rows = "5"></textarea>
+
+	<script>
+	
+		/* var text = document.getElementById("text");
+		var tip = document.getElementById("tip");
+		text.onfocus = function() {
+			tip.style.display = "block";
+		}
+		text.onblur = function() {
+			//tip.style.display = "none";
+			var val=this.value;
+			//console.log(val);
+			if(val.length==11){
+				tip.innerHTML="格式正确";
+			}else{
+				tip.innerHTML="格式不正确";
+			}
+		} */
+		
+		var tip = document.getElementById("tip");
+		var text = document.getElementById("text");
+		document.onkeyup = function(){
+			var len = text.value.length;
+			var last = 30-len;
+			if(last >= 0){
+				tip.innerHTML = '你还可以输入'+last+'个文字';
+			}else{
+				tip.innerHTML = '超出最大长度了';
+			}
+		}
+	</script>
+	
+	<div class = "box">
+		
+	</div>
+</body>
+</html>

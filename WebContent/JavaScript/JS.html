@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		var i = 1;
+		var str = "hello";
+		var is = [1,2,3];
+		console.log(str);
+		for(var i = 0;i<is.length;i++){
+			console.log(is[i]);
+		}
+		if(is.length == 3){
+			console.log("数组长度是：3");
+		}
+		var son = {name:"王芮",age:7,color:"yellow"};
+		son.run = function(){
+			console.log("儿子在奔跑");
+		}
+		bark = function(str){
+			console.log("王芮在叫唤："+str);
+		}
+		
+		console.log("儿子的名字是："+son.name);
+		var sage = "age"
+		console.log("年龄是："+son[sage]+"岁");
+		
+		son.run();
+		bark("我是你们的爸爸");
+		
+		var t = (1==="1")?true:false;
+		console.log(t);
+		
+		var age = 3;
+		if(age == 1){
+			console.log("儿子1岁了！");
+		}else if(age == 2){
+			console.log("儿子2岁了！");
+		}else if(age == 3){
+			console.log("儿子3岁了！");
+		}else if(age == 4){
+			console.log("儿子4岁了！");
+		}else {
+			console.log("儿子长大了！");
+		}
+		
+		var cat = {name:"哆啦A梦",age:7};
+		for(c in cat){
+			//car["name"] 相当于 cat.name
+			console.log(cat[c]);
+		}
+		
+		alert("王芮是我儿子");
+		alert("我是王芮的爸爸");
+		alert("我是王芮的皇阿玛");
+		alert("王芮一辈子是我儿子");
+		alert("王芮生生世世是我儿子");
+	</script>
+</body>
+</html>
